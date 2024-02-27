@@ -1,0 +1,214 @@
+body {
+    color: black !important;
+}
+
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.cabin {
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.vector2 {
+    right: 170px;
+    top: 0px;
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+}
+
+.vector1 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    max-width: 100%;
+    height: auto;
+}
+
+.image1 {
+    position: absolute;
+    right: 130px;
+    top: 80px;
+    width: 430px;
+    max-width: 100%;
+    height:auto;
+}
+
+.rectangle2 {
+    background-image: url("img/Rectangle 2.png");
+    background-size: 80% 40% !important;
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+}
+
+.rectangle3 {
+    background-image: url("img/Rectangle 17.png");
+    background-size: 70% 40% !important;
+    background-position: 85% 50%;
+    background-repeat: no-repeat;
+}
+
+.rectangle4 {
+    background-image: url("img/Rectangle 31.png");
+    background-size: 75% 40% !important;
+    background-position: 9% 50%;
+    background-repeat: no-repeat;
+}
+
+.gif {
+    position: absolute;
+    top: 10px;
+    left: 95px;
+    height: 320px;
+    border-radius: 15px;
+    border: solid 6px;
+    border-color:#CBF1BD;
+}
+
+.gif2 {
+    position: absolute;
+    top: 0px;
+    left: 165px;
+    height: 322px;
+    border-radius: 15px;
+    border: solid 6px;
+    border-color:#CBF1BD;
+}
+
+.gif3 {
+    position: absolute;
+    top: 0px;
+    left: 65px;
+    height: 322px;
+    border-radius: 15px;
+    border: solid 6px;
+    border-color:#CBF1BD;
+}
+
+.gif4 {
+    position: absolute;
+    top: 5px;
+    left: 55px;
+    height: 310px;
+    border-radius: 15px;
+    border: solid 6px;
+    border-color:#CBF1BD;
+}
+
+.gif5 {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    height: 320px;
+    border-radius: 15px;
+    border: solid 6px;
+    border-color:#CBF1BD;
+}
+
+.first_img {
+    position: absolute;
+    top: 5px;
+    left: 150px;
+    height: 310px;
+    border-radius: 15px;
+    border: solid 6px;
+    border-color:#CBF1BD;
+}
+
+.second_img {
+    position: absolute;
+    top: 5px;
+    left: 130px;
+    height: 310px;
+    border-radius: 15px;
+    border: solid 6px;
+    border-color:#CBF1BD;
+}
+
+.third_img {
+    position: absolute;
+    top: 0px;
+    left: 95px;
+    height: 320px;
+    border-radius: 15px;
+    border: solid 6px;
+    border-color:#CBF1BD;
+}
+
+.h1 {
+    font-family: "montserrat";
+    font-weight: 800;
+    font-size: 60px;
+    z-index: 1;
+}
+
+.h2 {
+    font-family: "montserrat";
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.subheading {
+    font-family: "cabin";
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.text {
+    font-family: "cabin";
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.socials {
+    font-family: "montserrat";
+    font-weight: 800;
+    font-size: 10px;
+}
+
+.labels {
+    font-family:"montserrat";
+    font-weight:800;
+    font-size:40px;
+    color:#5F745B;
+}
+
+.CVbutton {
+    border-color: #CBF1BD !important; 
+    border-radius: 10px;
+    background-color: white;
+    border: solid 4px;
+}
+
+.CVbutton:hover {
+    border-color: #CBF1BD !important; 
+    border-radius: 10px;
+    background-color: #CBF1BD;
+    border: solid 4px;
+}
+
+.notbutton {
+    cursor: default !important;
+    border-color: #CBF1BD !important; 
+    border-radius: 10px;
+    background-color: white;
+    border: solid 4px;
+}
+
+.notbutton:hover {
+    cursor: default !important;
+    border-color: #5F745B !important; 
+    border-radius: 10px;
+    background-color: white;
+    border: solid 4px;
+}

@@ -1,7 +1,7 @@
 body {
     color: black !important;
+    
 }
-
 
 .montserrat {
   font-family: "Montserrat", sans-serif;
@@ -19,127 +19,102 @@ body {
     "wdth" 100;
 }
 
-.vector2 {
-    right: 170px;
-    top: 0px;
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-}
-
 .vector1 {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 0px;
     max-width: 100%;
     height: auto;
+    width: 40vw;
 }
 
 .image1 {
     position: absolute;
     right: 130px;
     top: 80px;
-    width: 430px;
-    max-width: 100%;
+    width: 30%;
+    max-width: 100vw;
     height:auto;
 }
 
-.rectangle2 {
-    background-image: url("img/Rectangle 2.png");
-    background-size: 80% 40% !important;
-    background-position: 10% 50%;
-    background-repeat: no-repeat;
-}
-
-.rectangle3 {
-    background-image: url("img/Rectangle 17.png");
-    background-size: 70% 40% !important;
-    background-position: 85% 50%;
-    background-repeat: no-repeat;
-}
-
-.rectangle4 {
-    background-image: url("img/Rectangle 31.png");
-    background-size: 75% 40% !important;
-    background-position: 9% 50%;
-    background-repeat: no-repeat;
+.vector {
+    position: relative;
+    width: 8vw;
+    max-width: 100vw;
+    height: auto;
 }
 
 .gif {
-    position: absolute;
-    top: 10px;
-    left: 95px;
-    height: 320px;
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    width: 40vw;
     border-radius: 15px;
     border: solid 6px;
     border-color:#CBF1BD;
 }
 
 .gif2 {
-    position: absolute;
-    top: 0px;
-    left: 165px;
-    height: 322px;
+    position: relative;
+    height: auto;
+    width: 30vw;
     border-radius: 15px;
     border: solid 6px;
     border-color:#CBF1BD;
 }
 
 .gif3 {
-    position: absolute;
-    top: 0px;
-    left: 65px;
-    height: 322px;
+    position: relative;
+    height: auto;
+    width: 40vw;
     border-radius: 15px;
     border: solid 6px;
     border-color:#CBF1BD;
 }
 
 .gif4 {
-    position: absolute;
-    top: 5px;
-    left: 55px;
-    height: 310px;
+    position: relative;
+    height: auto;
+    width: 40vw;
     border-radius: 15px;
     border: solid 6px;
     border-color:#CBF1BD;
 }
 
 .gif5 {
-    position: absolute;
-    top: 0px;
-    left: 100px;
-    height: 320px;
+    position: relative;
+    height: auto;
+    width: 40vw;
     border-radius: 15px;
     border: solid 6px;
     border-color:#CBF1BD;
 }
 
 .first_img {
-    position: absolute;
-    top: 5px;
-    left: 150px;
-    height: 310px;
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    width: 40vw;
     border-radius: 15px;
     border: solid 6px;
     border-color:#CBF1BD;
 }
 
 .second_img {
-    position: absolute;
-    top: 5px;
-    left: 130px;
-    height: 310px;
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    width: 40vw;
     border-radius: 15px;
     border: solid 6px;
     border-color:#CBF1BD;
 }
 
 .third_img {
-    position: absolute;
-    top: 0px;
-    left: 95px;
-    height: 320px;
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    width: 40vw;
     border-radius: 15px;
     border: solid 6px;
     border-color:#CBF1BD;

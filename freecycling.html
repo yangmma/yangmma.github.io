@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Maxine's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <!--Montserrat Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--Cabin Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <br>
+        <!--Navbar & Image-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid px-5">
+                    <img src="img/Rectangle 1.png" id="invis" style="position: absolute;">
+                    <a class="navbar-brand px-3" href="index.html" style="color:black; font-family: montserrat; font-weight:800; font-size:40px; position: relative;">
+                        M. YANG
+                    </a>
+              <button onclick="change()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link px-4" href="index.html#projects" style="color:black; font-family:montserrat; font-weight: 800; font-size:20px;">Projects</a>
+                    <a class="nav-link px-4" href="index.html#interests" style="color:black; font-family:montserrat; font-weight: 800; font-size:20px;">Interests</a>
+                </div> 
+              </div>
+            </div>
+          </nav>
+    <br><br><br>
+
+    <div class="row">
+        <div class="col-sm-8 px-5">
+            <p class="h2">FREECYCLE.ORG REDESIGN Concept Project</p>
+            <br><br>
+            <p class="text">A Figma re-imagining of the current freecycle.org website as a portable app for tracking freecycling behaviours. This concept prototype was completed by me and my classmates <b>Andrew Qiu and J.J. Jared</b>, as a two-hour design project for our <b>COMPSCI 345 (Human-Computer Interaction)</b> course. </p>
+            <p class="text">Freecycling refers to the concept of people “gifting” items to each other that would have otherwise been sent to a landfill. The Freecycle Network is meant to be a sustainable and free alternative to many marketplace websites, such as eBay or Facebook Marketplace, wherein people can trade or give away unwanted items within their local communities.</p>
+            <p class="text">The <b>goal</b> of this particular freecycling app was to improve upon user-identified faults within the freecycle.org website, and to encourage a continued behaviour of freecycling from interested members. Prior research had been conducted on the functionality of the original website through design walkthroughs, in which specific usability and UX problems were identified:</p>
+        </div>
+        <div class="col-sm-4">
+            <img src="img/contents page.png" style="width:55%;margin-left:15%;">
+        </div>
+    </div>
+    <div class="row">
+        <div class="px-5 col-sm-11">
+            <br>
+            <ul class="text" style="font-style:italic; margin-left:50px;">
+                <li>Visually unappealing and outdated design, which may turn away potential users.</li>
+                <br>
+                <li>No marketplace is actually being displayed; the only way to access items is through the search bar, the main page, or by searching for a suburb, which increases the user’s cognitive load.</li>
+                <br>
+                <li>Responsiveness lacking on mobile.</li>
+                <br>
+                <li>Navigation is exceedingly difficult, given that most of the items usually on a navigation bar are located closer to the bottom of the page (requiring scrolling).</li>
+                <br>
+                <li>Searched items did not always display the image within the listing, despite having an image attached when opened.</li>
+            </ul> 
+            <br>
+            <p class="text">We began the project with three wireframes depicting our landing page, content page, and action page. As we were drawing up these designs, we decided on a handful of specific points to include in our high-fidelity prototype:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 px-5">
+            <ul class="text" style="font-style:italic; margin-left:50px;">
+                <br>
+                <li>As an eco-friendly entity with a green logo, the app should have a prominent green brand colour across all pages (the colour we ultimately decided on being #37A303). The other colours should ensure a professional, yet friendly appearance to the app.</li>
+                <br>
+                <li>To maintain the interest of users, we decided to implement a statistics page such that users can track their freecycling progress. This was done with the intent that users who can see a visible change in their statistics are more likely to continue seeking further progress.</li>
+                <br>
+                <li>The design should be relatively simple, with the intent that users should not be deterred from freecycling by an overcomplicated application. Navigation should be to the point, and finding items should include listed options as opposed to relying on the user to type out locations and categories themselves.</li>
+                <br>
+                <li>Images of listed items should be clear to allow users to identify potential picks from glance.</li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <img src="img/image 1.png" style="width:70%; margin-top: 20%; margin-left:10%;">
+        </div>
+    </div>
+    <br><hr><br>
+    <div class="row">
+        <div class="px-5 col-sm-8">
+            <h3 class="h3">THE LANDING PAGE</h3>
+            <p class="text">The <b>landing page</b> is meant to be a highly simplistic, inviting page that gives the user important information on the purpose and usage of the app. It is often the first impression a user will have, and as such must reflect the Freecycling brand in a truthful and appealing manner.</p>
+            <p class="text">Our prototype landing page includes only three items:</p>
+            <ol class="text" style="font-style:italic; margin-left:50px;">
+                <li>The logo, which is positioned in the top-centre of the page to draw attention.</li> <br>
+                <li>The key information, which uses a snappy, coloured tag-line to pique user interest.
+                    <ol>
+                        <li style="list-style-type: lower-roman;">This is followed by a couple paragraphs of information explaining the purpose and usage of the Freecycle Network, taken from the original website.
+                        </li>
+                    </ol>
+                </li> <br>
+                <li>The sign-up form, which is intuitive, appealing and easy to access to encourage user participation.</li> <br>
+            </ol>
+        </div>
+        <div class="col-sm-4">
+            <img src="img/freecycling first page.png" style="width:50%;margin-left:15%;">
+        </div>
+    </div>
+    <br><hr><br>
+    <div class="row">
+        <div class="px-5 col-sm-8">
+            <h3 class="h3">THE CONTENTS</h3>
+            <p class="text">The <b>contents page</b> follows immediately after a user has logged in.</p>
+            <p class="text">Given the purpose of the network as a pseudo-marketplace, and the inherent difficulty in navigating the initial website, the decision was made to have the first contents page be the marketplace itself. This page has the option to scroll through the items in the marketplace, which can be sorted or added to as needed by the user.</p>
+            <p class="text">There is also the option to access two alternative pages: the <b>statistics page</b>, which provides the user with clearly-displayed statistics of their freecycling participation, and a <b>'My Items'</b> page that allows users to view their contributions.</p>
+            <p class="text">The <b>statistics page</b> has a clear layout including the option to seek out weekly, monthly and yearly statistics. Having a page to track statistics was suggested to increase user interest and engagement with the premise of freecycling, almost gameifying the experience. We used simple charts to communicate progress in a glanceable manner, with more detailed statistics available upon scrolling.</p>
+            <p class="text">The <b>'My Items'</b> page mimics the format of the marketplace, but has the functionality for the user to check and edit their own listings.</p>
+        </div>
+        <div class="col-sm-4">
+            <img src="img/freecycling contents.gif" style="width:50%;margin-left:15%;">
+        </div>
+    </div>
+    <br><br>
+</body>
+</html>

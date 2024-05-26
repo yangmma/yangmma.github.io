@@ -7,6 +7,10 @@ a {
     color:#5F745B;
 }
 
+button {
+    color: black;
+}
+
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -188,6 +192,7 @@ a {
     border-radius: 10px;
     background-color: white;
     border: solid 4px;
+    olor: #5F745B;
 }
 
 .notbutton:hover {

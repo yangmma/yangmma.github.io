@@ -133,6 +133,12 @@ body {
     font-size: 50px;
 }
 
+.h3 {
+    font-family: "montserrat";
+    font-weight: 800;
+    font-size: 30px;
+}
+
 .subheading {
     font-family: "cabin";
     font-weight: 400;

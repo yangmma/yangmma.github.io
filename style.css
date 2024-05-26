@@ -3,6 +3,10 @@ body {
     
 }
 
+a {
+    color:#5F745B;
+}
+
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;

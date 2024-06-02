@@ -25,12 +25,11 @@
 
 <body>
     <!--Navbar-->
-    <br>
         <!--Navbar & Image-->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid px-5">
-                    <img src="img/Rectangle 1.png" id="invis" style="position: absolute;">
-                    <a class="navbar-brand px-3" href="index.html" style="color:black; font-family: montserrat; font-weight:800; font-size:40px; position: relative;">
+                    <img src="img/Rectangle 1.png" id="invis" style="position: absolute; width:14.5vw; min-width:170px; max-width: 650px; height:auto;">
+                    <a class="navbar-brand px-3 navbar-title" href="index.html">
                         M. YANG
                     </a>
               <button onclick="change()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,37 +37,37 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link px-4" href="index.html#projects" style="color:black; font-family:montserrat; font-weight: 800; font-size:20px;">Projects</a>
-                    <a class="nav-link px-4" href="index.html#interests" style="color:black; font-family:montserrat; font-weight: 800; font-size:20px;">Interests</a>
+                    <a class="nav-link navbar-subheaders" href="#projects">Projects</a>
+                    <a class="nav-link navbar-subheaders" href="#interests">Interests</a>
                 </div> 
               </div>
             </div>
-          </nav>
-    <br><br><br>
+        </nav>
 
-    <div class="row">
-        <div class="col-sm-11 px-5">
+    <div class="row" style="margin-top:max(90px, 6vw); margin-bottom: max(8vw, 100px);">
+        <div class="col-sm-11">
             <p class="h1">FREECYCLE PROJECT</p>
-            <p class="text" style="font-style:italic;">In my Human-Computer Interaction (CS345) class, I was tasked with re-designing an existing website (freecycle.org) to better accommodate usability needs. This project came in two parts: a group mobile re-design on Figma, and a personal high-fidelity web re-design.</p>
+            <p class="text-freecycling" style="font-style:italic;">In my Human-Computer Interaction (CS345) class, I was tasked with re-designing an existing website (freecycle.org) to better accommodate usability needs. This project came in two parts: a group mobile re-design on Figma, and a personal high-fidelity web re-design.</p>
         </div>
     </div>
-    <br><br><hr><br><br>
-    <div class="row">
-        <div class="col-sm-8 px-5">
+    <hr>
+    <div class="row project-spacing">
+        <div class="col-sm-8">
             <p class="h2">MOBILE RE-DESIGN</p>
             <br><br>
-            <p class="text">A Figma re-imagining of the current freecycle.org website as a portable app for tracking freecycling behaviours. This concept prototype was completed by me and my classmates <b>Andrew Qiu and J.J. Jared</b>, as a two-hour design project for our <b>COMPSCI 345 (Human-Computer Interaction)</b> course. </p>
-            <p class="text">Freecycling refers to the concept of people “gifting” items to each other that would have otherwise been sent to a landfill. The Freecycle Network is meant to be a sustainable and free alternative to many marketplace websites, such as eBay or Facebook Marketplace, wherein people can trade or give away unwanted items within their local communities.</p>
-            <p class="text">The <b>goal</b> of this particular freecycling app was to improve upon user-identified faults within the freecycle.org website, and to encourage a continued behaviour of freecycling from interested members. Prior research had been conducted on the functionality of the original website through design walkthroughs, in which specific usability and UX problems were identified:</p>
+            <p class="text-freecycling">A Figma re-imagining of the current freecycle.org website as a portable app for tracking freecycling behaviours. This concept prototype was completed by me and my classmates <b>Andrew Qiu and J.J. Jared</b>, as a two-hour design project for our <b>COMPSCI 345 (Human-Computer Interaction)</b> course. </p>
+            <p class="text-freecycling">Freecycling refers to the concept of people “gifting” items to each other that would have otherwise been sent to a landfill. The Freecycle Network is meant to be a sustainable and free alternative to many marketplace websites, such as eBay or Facebook Marketplace, wherein people can trade or give away unwanted items within their local communities.</p>
+            <p class="text-freecycling">The <b>goal</b> of this particular freecycling app was to improve upon user-identified faults within the freecycle.org website, and to encourage a continued behaviour of freecycling from interested members. Prior research had been conducted on the functionality of the original website through design walkthroughs, in which specific usability and UX problems were identified:</p>
         </div>
-        <div class="col-sm-4">
-            <img src="img/contents page corrected.png" style="width:55%; margin-left: auto; margin-right: auto; display:block;" alt="The original freecycle.org website design, on mobile.">
-            <p class="text" style="font-size:12px; text-align:center;">Figure 1: The original freecycle.org website design, on mobile.</p>
+        <div class="col-sm-4" style=" margin-top:1vh;">
+            <img src="img/contents page.png" style="width:50%; margin-left: auto; margin-right: auto; display:block;" alt="The original freecycle.org website design, on mobile.">
+            <p class="little-note" style="text-align:center;">Figure 1: The original freecycle.org website design, on mobile.</p>
         </div>
     </div>
+
     <div class="row">
-        <div class="px-5 col-sm-11">
-            <ul class="text" style="font-style:italic; margin-left:50px;">
+        <div class="col-sm-11">
+            <ul class="text" style="font-style:italic; margin-left: 6vw;">
                 <li>Visually unappealing and outdated design, which may turn away potential users.</li>
                 <br>
                 <li>No marketplace is actually being displayed; the only way to access items is through the search bar, the main page, or by searching for a suburb, which increases the user’s cognitive load.</li>
@@ -79,13 +78,13 @@
                 <br>
                 <li>Searched items did not always display the image within the listing, despite having an image attached when opened.</li>
             </ul> 
-            <br>
-            <p class="text">We began the project with three wireframes depicting our landing page, content page, and action page. As we were drawing up these designs, we decided on a handful of specific points to include in our high-fidelity prototype:</p>
+            <p class="text-freecycling project-spacing">We began the project with three wireframes depicting our landing page, content page, and action page. As we were drawing up these designs, we decided on a handful of specific points to include in our high-fidelity prototype:</p>
         </div>
     </div>
+
     <div class="row">
-        <div class="col-sm-8 px-5">
-            <ul class="text" style="font-style:italic; margin-left:50px;">
+        <div class="col-sm-8">
+            <ul class="text" style="font-style:italic; margin-left:6vw;">
                 <br>
                 <li>As an eco-friendly entity with a green logo, the app should have a prominent green brand colour across all pages (the colour we ultimately decided on being #37A303). The other colours should ensure a professional, yet friendly appearance to the app.</li>
                 <br>
@@ -98,16 +97,16 @@
         </div>
         <div class="col-sm-4">
             <img src="img/image 1.png" style="width:70%; margin-left: auto; margin-right: auto; display:block; margin-top:20%;">
-            <p class="text" style="font-size:12px; text-align:center;">Figure 2: Our wireframes / sketches.</p>  
+            <p class="little-note" style="text-align:center;">Figure 2: Our wireframes / sketches.</p>  
         </div>
     </div>
-    <br><br><br>
-    <div class="row">
-        <div class="px-5 col-sm-8">
+
+    <div class="row project-spacing">
+        <div class="col-sm-8">
             <h3 class="h3">THE LANDING PAGE</h3>
-            <p class="text">The <b>landing page</b> is meant to be a highly simplistic, inviting page that gives the user important information on the purpose and usage of the app. It is often the first impression a user will have, and as such must reflect the Freecycling brand in a truthful and appealing manner.</p>
-            <p class="text">Our prototype landing page includes only three items:</p>
-            <ol class="text" style="font-style:italic; margin-left:50px;">
+            <p class="text-freecycling">The <b>landing page</b> is meant to be a highly simplistic, inviting page that gives the user important information on the purpose and usage of the app. It is often the first impression a user will have, and as such must reflect the Freecycling brand in a truthful and appealing manner.</p>
+            <p class="text-freecycling">Our prototype landing page includes only three items:</p>
+            <ol class="text" style="font-style:italic; margin-left:6vw;">
                 <li>The logo, which is positioned in the top-centre of the page to draw attention.</li> <br>
                 <li>The key information, which uses a snappy, coloured tag-line to pique user interest.
                     <ol>
@@ -120,33 +119,33 @@
         </div>
         <div class="col-sm-4">
             <img src="img/freecycling first page.png" style="width:50%;margin-left: auto; margin-right: auto; display:block;">
-            <p class="text" style="font-size:12px; text-align:center;">Figure 3: Our landing page.</p>  
+            <p class="little-note" style="text-align:center;">Figure 3: Our landing page.</p>  
         </div>
     </div>
-    <br><br><br>
-    <div class="row">
-        <div class="px-5 col-sm-8">
+
+    <div class="row project-spacing" style="margin-bottom: max(8vw, 100px);">
+        <div class="col-sm-8">
             <h3 class="h3">THE CONTENTS</h3>
-            <p class="text">The <b>contents page</b> follows immediately after a user has logged in.</p>
-            <p class="text">Given the purpose of the network as a pseudo-marketplace, and the inherent difficulty in navigating the initial website, the decision was made to have the first contents page be the marketplace itself. This page has the option to scroll through the items in the marketplace, which can be sorted or added to as needed by the user.</p>
-            <p class="text">There is also the option to access two alternative pages: the <b>statistics page</b>, which provides the user with clearly-displayed statistics of their freecycling participation, and a <b>'My Items'</b> page that allows users to view their contributions.</p>
-            <p class="text">The <b>statistics page</b> has a clear layout including the option to seek out weekly, monthly and yearly statistics. Having a page to track statistics was suggested to increase user interest and engagement with the premise of freecycling, almost gameifying the experience. We used simple charts to communicate progress in a glanceable manner, with more detailed statistics available upon scrolling.</p>
-            <p class="text">The <b>'My Items'</b> page mimics the format of the marketplace, but has the functionality for the user to check and edit their own listings.</p>
+            <p class="text-freecycling">The <b>contents page</b> follows immediately after a user has logged in.</p>
+            <p class="text-freecycling">Given the purpose of the network as a pseudo-marketplace, and the inherent difficulty in navigating the initial website, the decision was made to have the first contents page be the marketplace itself. This page has the option to scroll through the items in the marketplace, which can be sorted or added to as needed by the user.</p>
+            <p class="text-freecycling">There is also the option to access two alternative pages: the <b>statistics page</b>, which provides the user with clearly-displayed statistics of their freecycling participation, and a <b>'My Items'</b> page that allows users to view their contributions.</p>
+            <p class="text-freecycling">The <b>statistics page</b> has a clear layout including the option to seek out weekly, monthly and yearly statistics. Having a page to track statistics was suggested to increase user interest and engagement with the premise of freecycling, almost gameifying the experience. We used simple charts to communicate progress in a glanceable manner, with more detailed statistics available upon scrolling.</p>
+            <p class="text-freecycling">The <b>'My Items'</b> page mimics the format of the marketplace, but has the functionality for the user to check and edit their own listings.</p>
         </div>
         <div class="col-sm-4">
             <img src="img/freecycling contents.gif" style="width:50%; margin-left: auto; margin-right: auto; display:block;">
-            <p class="text" style="font-size:12px; text-align:center;">Figure 4: Interaction design of our contents pages.</p>  
+            <p class="little-note" style="text-align:center;">Figure 4: Interaction design of our contents pages.</p>  
         </div>
     </div>
-    <br><br><hr><br><br>
-    <div class="row">
-        <div class="col-sm-11 px-5">
+    <hr>
+    <div class="row project-spacing">
+        <div class="col-sm-11">
             <p class="h2">HIGH-FIDELITY WEB RE-DESIGN</p>
             <br><br>
-            <p class="text">As an additional final project, I was tasked to create a high-fidelity web prototype of my own re-design. This prototype was coded using HTML and W3C.css, and designed in Figma based on research from previously mentioned design walkthroughs.</p>
-            <p class="text">We were given client specifications to follow as well, including: </p>
+            <p class="text-freecycling">As an additional final project, I was tasked to create a high-fidelity web prototype of my own re-design. This prototype was coded using HTML and W3C.css, and designed in Figma based on research from previously mentioned design walkthroughs.</p>
+            <p class="text-freecycling">We were given client specifications to follow as well, including: </p>
             <br>
-            <ul class="text" style="font-style:italic">
+            <ul class="text" style="font-style:italic; margin-left:6vw;">
                 <li>An assigned brand colour, of which mine was <span style="background-color:#AEA04b;">#AEA04B</span>, with the condition that it must be implemented throughout the website in a recogniseable manner.</li>
                 <br>
                 <li>That the website must match the dimensions for a Google Chrome screen (dimensions 1920x1080).</li>
@@ -154,31 +153,33 @@
                 <li>That the prototype must include a landing page, and a functional pop-up modal for signing in. No other functionality necessary.</li>
                 <br>
             </ul>
-            <p class="text">While reading the client brief, I was particularly concerned with accessibility, given that my colour is quite light against a white background and may therefore be difficult to see. Thus, I conducted research into current accessibility guidelines, and made effort into assuring that font size, alternative text, and contrast ratios were optimised for any potential user. </p>    
-            <p class="text">I was also concerned about finding a suitable colour palette that maintained an aesthetic and minimalist design, as well as colour contrast requirements. I ended up developing and tweaking a monochromatic colour scheme to suit this, and altered a background image to introduce some dark green.</p>
-            <p class="text">I made an effort to implement design principles that would most increase usability and ease of learning, while minimising any potential errors. I also wanted to ensure that the goals of the client (that is, to introduce and encourage people to sign-up and freecycle) was effectively communicated by creating a friendly, encouraging, yet professional design. I mostly used Gestalt principles in my design, alongside balance, unity and emphasis.</p>
-            <p class="text">The final submission was an annotation report detailing and justifying my design decisions, which can be viewed on this page below.</p>
+            <p class="text-freecycling">While reading the client brief, I was particularly concerned with accessibility, given that my colour is quite light against a white background and may therefore be difficult to see. Thus, I conducted research into current accessibility guidelines, and made effort into assuring that font size, alternative text, and contrast ratios were optimised for any potential user. </p>    
+            <p class="text-freecycling">I was also concerned about finding a suitable colour palette that maintained an aesthetic and minimalist design, as well as colour contrast requirements. I ended up developing and tweaking a monochromatic colour scheme to suit this, and altered a background image to introduce some dark green.</p>
+            <p class="text-freecycling">I made an effort to implement design principles that would most increase usability and ease of learning, while minimising any potential errors. I also wanted to ensure that the goals of the client (that is, to introduce and encourage people to sign-up and freecycle) was effectively communicated by creating a friendly, encouraging, yet professional design. I mostly used Gestalt principles in my design, alongside balance, unity and emphasis.</p>
+            <p class="text-freecycling">The final submission was an annotation report detailing and justifying my design decisions, which can be viewed on this page below.</p>
         </div>
     </div>
-    <br><br>
-    <div class="row">
-        <div class="col-sm-12 px-5">
+
+    <div class="row project-spacing">
+        <div class="col-sm-12">
             <iframe class="pdf" alt="Annotation report." style="margin-left:auto; margin-right:auto; display:block;"
                 src="pdf/myan565 COMPSCI345 Report.pdf"
-            width="80%" height="500">
+            width="80%" height="500vh;">
         </iframe>  
         </div>
     </div>
-    <br><br>
-    <div>
-        <img src="img/FR Landing Page.png" style="margin-left:auto; margin-right: auto; display:block; width:50%; border: 5px solid #CBF1BD; border-radius:10px;">
+
+    <div class="project-spacing">
+        <img src="img/FR Landing Page.png" class="first_img" style="margin-left:auto; margin-right: auto; display:block; width:50%;">
+        <p class="little-note" style="text-align:center;">Figure 5: The landing page.</p>
     </div>
-    <br><br>
-    <div>
-        <img src="img/FR Modal Pop-Up.png" style="margin-left:auto; margin-right: auto; display:block; width:50%; border: 5px solid #CBF1BD; border-radius:10px;">
+
+    <div class="project-spacing">
+        <img src="img/FR Modal Pop-Up.png" class="first_img" style="margin-left:auto; margin-right: auto; display:block; width:50%;">
+        <p class="little-note" style="text-align:center;">Figure 6: The pop-up modal.</p>
     </div>
-    <br>
-    <div class="row">
+
+    <div class="row project-spacing">
         <div class="col-sm-12" style="text-align:center;"><button class="CVbutton text px-3" onclick="topFunction()" id="myBtn">BACK TO TOP</button></div>
     </div>
     <br><br>

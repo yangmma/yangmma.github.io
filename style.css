@@ -161,7 +161,7 @@ button {
 
 .vector {
     position: relative;
-    width: max(20px, 7vw);
+    width: 20vw;
     height: auto;
 }
 
@@ -229,7 +229,7 @@ button {
     border-color:#CBF1BD;
 }
 
-.first_img {
+.music_img {
     position: relative;
     height: auto;
     max-width: 100%;
@@ -239,7 +239,7 @@ button {
     border-color:#CBF1BD;
 }
 
-.second_img {
+.fitness_img {
     position: relative;
     height: auto;
     max-width: 100%;
@@ -249,7 +249,7 @@ button {
     border-color:#CBF1BD;
 }
 
-.third_img {
+.film_img {
     position: relative;
     height: auto;
     max-width: 100%;

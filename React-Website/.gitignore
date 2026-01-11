@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+/.vite          # Vite dev server cache (sometimes appears)
+/out            # if you export static builds
+*.env.local     # local environment variables

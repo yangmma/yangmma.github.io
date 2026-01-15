@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components';
 import Boulder1 from '../assets/Group 21.svg';
 import RotatingText from '../components/RotatingText.jsx'
+import HoverSpotlightButton from "./HoverSpotlightButton.jsx";
 
 
 const GridWrapper = styled.section`
@@ -33,6 +34,8 @@ const TextBox = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    position: relative;
+    z-index: 1;
 `;
 
 const BodyText1 = styled.p`
@@ -46,28 +49,6 @@ const HeaderText = styled.h1`
 
 const ColourText = styled.span`
     color: #68A4D4;
-`;
-
-// NOTE: There is a text clipping issue (responsiveness) that needs to be fixed.
-const CVButton = styled.a` 
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(0.5rem, 3vw, 2rem);    
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1vmin;
-    border: 5px solid #68A4D4;
-    background-color: white;
-    color: #68A4D4;
-    width: 10vw;
-    border-radius: 15px;
-
-    &:hover {
-        background-color: #68a3d457;
-        color: #68A4D4;
-        border: 5px solid #68A4D4;
-        cursor: pointer;
-    }
 `;
 
 
@@ -84,7 +65,7 @@ export default function AboutBox() {
                         texts={[
                             'full-stack software development.',
                             'AI and machine learning.',
-                            'web applications.',
+                            'human-computer interaction.',
                             'UX/UI design.'
                         ]}
                         transition={{ type: 'spring', stiffness: 400, damping: 30 }}
@@ -94,7 +75,7 @@ export default function AboutBox() {
                         />
                     </ColourText>
                 </BodyText1>
-            <CVButton href="/Maxine_Yang_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Resume</CVButton>
+            <HoverSpotlightButton href="/Maxine_Yang_Resume_2026.pdf">Resume</HoverSpotlightButton>
             </TextBox>
             <div></div>
         </GridWrapper>

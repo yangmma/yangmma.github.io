@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { useEffect, useRef } from "react";
 
+// NOTE TO SELF: Come back and consider adding the spotlight effect to changing text colour
+
 const LinkButton = styled(motion.a)` 
     position: relative;
     overflow: hidden;

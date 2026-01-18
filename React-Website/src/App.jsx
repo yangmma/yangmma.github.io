@@ -6,7 +6,7 @@ import Page1 from "./pages/About.jsx";
 import Page2 from "./pages/Experience";
 
 // import components:
-import NavBar from "./components/NavBar";
+import NavBar from "./components/widgets/NavBar";
 
 
 function App() {

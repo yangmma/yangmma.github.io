@@ -5,6 +5,9 @@ import GreyVolumeA from '../assets/GreyVolume.svg?react';
 import YellowVolumeA from '../assets/YellowVolume.svg?react'
 import { useParallax } from 'react-scroll-parallax';
 import BackgroundBox from '../components/BackgroundBox';
+import PassionBox from '../components/PassionBox';
+import SkillsBox from '../components/SkillsBox';
+import HobbiesBox from '../components/HobbiesBox';
 
 const Animation = keyframes`
     0% {
@@ -67,9 +70,16 @@ export default function Page1() {
         <AnimatedWrapper>
             <BackgroundWrapper>
                 <div>
+                    <br/><br/>
                     <AboutBox />
-                    <br/> <br/>
+                    <br/><br/><br/>
                     <BackgroundBox />
+                    <br/><br/><br/>
+                    <PassionBox />
+                    <br/><br/><br/>
+                    <SkillsBox />
+                    <br/><br/><br/>
+                    <HobbiesBox/>
                 </div>
                     <VolumeWrapper ref={parallax.ref}>
                         <VolumeIcon1 />

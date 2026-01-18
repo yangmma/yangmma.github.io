@@ -1,8 +1,8 @@
 import React from "react"
 import styled from 'styled-components';
 import Boulder1 from '../assets/Group 21.svg';
-import RotatingText from '../components/RotatingText.jsx'
-import HoverSpotlightButton from "./HoverSpotlightButton.jsx";
+import RotatingText from "./widgets/RotatingText.jsx";
+import HoverSpotlightButton from "./widgets/HoverSpotlightButton.jsx";
 
 
 const GridWrapper = styled.section`
@@ -33,6 +33,7 @@ const TextBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    item-align: center;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -57,10 +58,10 @@ export default function AboutBox() {
         <GridWrapper>
             <div></div>
             <BoulderImg src={Boulder1} alt="Boulder" />
-            <TextBox>
+            <TextBox style={{display:'flex'}}>
                 <HeaderText>Kia ora! My name is <ColourText>Maxine Yang.</ColourText></HeaderText>
                 <BodyText1>
-                    I’m a BSc(Hons) Computer Science Graduate with a BSc in Psychology. I am particularly interested in <ColourText>{' '}
+                    I’m a BSc(Hons) Computer Science graduate with a BSc in Psychology. I am particularly interested in <ColourText>{' '}
                     <RotatingText
                         texts={[
                             'full-stack software development.',
@@ -75,7 +76,7 @@ export default function AboutBox() {
                         />
                     </ColourText>
                 </BodyText1>
-            <HoverSpotlightButton href="/Maxine_Yang_Resume_2026.pdf">Resume</HoverSpotlightButton>
+                <HoverSpotlightButton href="/Maxine_Yang_Resume_2026.pdf">Resume</HoverSpotlightButton>
             </TextBox>
             <div></div>
         </GridWrapper>

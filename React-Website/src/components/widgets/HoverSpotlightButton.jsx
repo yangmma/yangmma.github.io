@@ -13,7 +13,7 @@ const LinkButton = styled(motion.a)`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1vmin;
+    padding: clamp(10px, 1vmin, 10px);
     border: 5px solid #68A4D4;
     background-color: white;
     width: 10vw;

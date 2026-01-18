@@ -232,9 +232,8 @@ export default function SkillsBox() {
                     onClick={() => setActiveSkill("soft")}
                     style={{
                         position: 'absolute',
-                        bottom: '10%',
+                        bottom: '5%',
                         left: '55%'
-
                     }}
                 >
                     <B4 

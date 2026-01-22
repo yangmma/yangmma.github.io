@@ -13,12 +13,12 @@ const LinkButton = styled(motion.a)`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(10px, 1vmin, 10px);
-    border: 5px solid #68A4D4;
+    padding: clamp(20px, 1vmin, 30px);
+    border: 5px solid ${({ $color }) => $color};
     background-color: white;
     width: 10vw;
     border-radius: 15px;
-    color: #68A4D4;
+    color: ${({ $color }) => $color};
 
 
     &:hover span {
@@ -39,7 +39,7 @@ const Spotlight = styled.span`
     left: 50%;
     height: 80px;
     width: 80px;
-    background: #68a3d457;
+    background: ${({ $color }) => `${$color}57`};
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -49,7 +49,7 @@ const Spotlight = styled.span`
 `;
 
 
-export default function HoverSpotlightButton( { href, children } ) { // Modified Spotlight button from Hover.dev
+export default function HoverSpotlightButton( { href, children, color = "#68A4D4" } ) { // Modified Spotlight button from Hover.dev
 
     const buttonRef = useRef(null);
     const spotlightRef = useRef(null)
@@ -91,9 +91,9 @@ export default function HoverSpotlightButton( { href, children } ) { // Modified
     }, []);
 
     return(
-        <LinkButton ref={buttonRef} href={href} target={"_blank"} whileTap={{ scale: 0.98}}>
+        <LinkButton ref={buttonRef} href={href} $color={color} target={"_blank"} whileTap={{ scale: 0.98}}>
             <ButtonText>{children}</ButtonText>
-            <Spotlight ref={spotlightRef} />
+            <Spotlight ref={spotlightRef} $color={color}/>
         </LinkButton>
     )
 }

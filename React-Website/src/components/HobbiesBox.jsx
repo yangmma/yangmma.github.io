@@ -10,7 +10,7 @@ const GridWrapper = styled.section`
     justify-items: center;
     padding: 3rem;
 
-    min-height: 100vh;
+    min-height: 120vh;
     min-width: 100vw;
     box-sizing: border-box;
 
@@ -39,14 +39,14 @@ const HeaderText = styled.h1`
 `;
 
 const ColourText = styled.span`
-    color: #CFA5C7;
+    color: #D0A757;
 `;
 
 const BoulderImg = styled.img`
-    width: 100%;
+    width: 110%;
     max-width: 700px;
     height: auto;
-    right: 2rem;
+    transform: rotate(180deg);
 `;
 
 export default function HobbiesBox() {
@@ -55,9 +55,9 @@ export default function HobbiesBox() {
             <div></div>
             <BoulderImg src={Boulder} alt="Boulder" />
             <TextBox>
-                <HeaderText> My hobbies include bouldering, drumming, and Muay Thai.</HeaderText>
+                <HeaderText> My hobbies include <ColourText>bouldering, drumming, and Muay Thai.</ColourText></HeaderText>
                 <BodyText1>
-                    I'm a member of several bands in Auckland and have experience recording music for platforms such as <a href="https://open.spotify.com/artist/77beRITmkfiAxZ4nA6m6o8?si=dIxxKAAwR_arU6HCvJI89A">Spotify</a>, and performing at various live venues. I enjoy staying active, and both bouldering and Muay Thai help me push myself both physically and mentally. Reach out to me if you share my hobbies!
+                    I'm a member of several bands in Auckland and have experience recording music for platforms such as <a target="_blank" style={{color:'#D0A757', textDecoration:'underline'}} href="https://open.spotify.com/artist/77beRITmkfiAxZ4nA6m6o8?si=dIxxKAAwR_arU6HCvJI89A">Spotify</a>, and performing at various live venues. I enjoy staying active, and bouldering and Muay Thai help me push myself both physically and mentally. If you have shared interests, I'd love to have a chat with you!
                 </BodyText1>
             </TextBox>
             <div></div>

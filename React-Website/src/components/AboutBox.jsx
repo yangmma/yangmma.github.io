@@ -52,6 +52,15 @@ const ColourText = styled.span`
     color: #68A4D4;
 `;
 
+const ButtonsContainer = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @media (max-width:768px) {
+        justify-content: center;
+    }
+`;
+
 
 export default function AboutBox() {
     return (
@@ -76,7 +85,9 @@ export default function AboutBox() {
                         />
                     </ColourText>
                 </BodyText1>
-                <HoverSpotlightButton href="/Maxine_Yang_Resume_2026.pdf">Resume</HoverSpotlightButton>
+                <ButtonsContainer>
+                    <HoverSpotlightButton href="/Maxine_Yang_Resume_2026.pdf">Resume</HoverSpotlightButton>
+                </ButtonsContainer>
             </TextBox>
             <div></div>
         </GridWrapper>

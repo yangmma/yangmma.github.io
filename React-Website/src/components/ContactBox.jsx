@@ -51,12 +51,14 @@ const BoulderImg = styled.img`
     height: auto;
 `;
 
-const Spacing = styled.div`
-    margin-left: clamp(1rem, 1vw, 1.5rem);
-`;
-
 const ButtonsContainer = styled.div`
     display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    @media (max-width:768px) {
+        justify-content: center;
+    }
 `;
 
 export default function ContactBox() {
@@ -66,11 +68,10 @@ export default function ContactBox() {
             <TextBox>
                 <HeaderText>Interested in collaborating? Feel free to reach out to me!</HeaderText>
                 <BodyText1>
-                    You can email me via <a href="mailto:yangmma03@gmail.com"><ColourText>yangmma03@gmail.com</ColourText></a>, or reach out to me on the following:
+                    You can email me via <a href="mailto:yangmma03@gmail.com"><ColourText>yangmma03@gmail.com</ColourText></a>, or take a look at the following:
                 </BodyText1>
                 <ButtonsContainer>
                     <HoverSpotlightButton href="https://www.linkedin.com/in/mma-yang/" color="#A4C5A5">LinkedIn</HoverSpotlightButton>
-                    <Spacing/>
                     <HoverSpotlightButton href="https://github.com/yangmma" color="#A4C5A5">GitHub</HoverSpotlightButton>
                 </ButtonsContainer>
 

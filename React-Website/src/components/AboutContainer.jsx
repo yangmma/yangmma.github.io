@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutBox from '../components/AboutBox';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import GreyVolumeA from '../assets/GreyVolume.svg?react';
 import YellowVolumeA from '../assets/YellowVolume.svg?react'
 

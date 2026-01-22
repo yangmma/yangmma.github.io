@@ -68,6 +68,7 @@ export default function AboutContainer() {
                 <HobbiesBox/>
                 <br/><br/><br/>
                 <ContactBox/>
+                <br/><br/><br/>
             </div>
             <VolumeWrapper ref={parallax.ref}>
                 <VolumeIcon1 />

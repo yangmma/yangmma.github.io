@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRef, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import AboutContainer from '../components/AboutContainer';
 
@@ -19,12 +20,52 @@ const AnimatedWrapper = styled.div`
     z-index:2;
 `
 
+const ScrollWrapper = styled.div`
+    height: 100vh;
+    overflow-y: scroll;
+    overscroll-behaviour: none;
+`
+
+const LoopContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+
 export default function Page1() {
+    const scrollRef = useRef(null);
+
+    useEffect(() => {
+        const element = scrollRef.current;
+        if (!element) return;
+        const buffer = 300;
+
+        const handleScroll = () => {
+            const halfTop = element.scrollHeight / 2;
+            if (element.scrollTop > halfTop + buffer) {
+                element.scrollTop -= halfTop;
+            }
+            if (element.scrollTop < buffer) {
+                element.scrollTop += halfTop;
+            }
+        };
+
+        element.addEventListener("scroll", handleScroll)
+        return () => element.removeEventListener("scroll", handleScroll)
+        
+    }, []);
+
     
     return (
         <AnimatedWrapper>
-            <AboutContainer/>
-            <div style={{ height: '200vh' }} />
+            <ScrollWrapper ref={scrollRef}>
+                <LoopContainer>
+                    <AboutContainer/>
+                    <AboutContainer/>
+                    <AboutContainer/>
+                    <AboutContainer/>
+                </LoopContainer>
+            </ScrollWrapper>
         </AnimatedWrapper>
     );
 }

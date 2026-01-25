@@ -5,6 +5,24 @@
   text-align: center;
 }
 
+@-moz-document url-prefix() { /* I genuinely do not know why this is not working. a.*/
+    html, body{
+      overflow: hidden !important;
+    }
+  }
+
+html, body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar{
+  width: 0;
+  background: transparent;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

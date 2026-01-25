@@ -1,6 +1,6 @@
-import React from 'react';
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+
 import AboutContainer from '../components/AboutContainer';
 
 const Animation = keyframes`
@@ -20,52 +20,65 @@ const AnimatedWrapper = styled.div`
     z-index:2;
 `
 
-const ScrollWrapper = styled.div`
-    height: 100vh;
-    overflow-y: scroll;
-    overscroll-behaviour: none;
+const LoopViewport = styled.div`
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
 `
 
 const LoopContainer = styled.div`
+    will-change: transform;
     display: flex;
     flex-direction: column;
 `
 
 
 export default function Page1() {
-    const scrollRef = useRef(null);
+  const trackRef = useRef(null);
+  const [trackHeight, setTrackHeight] = useState(0);
 
-    useEffect(() => {
-        const element = scrollRef.current;
-        if (!element) return;
-        const buffer = 300;
+  const items = [
+    <AboutContainer key={0} />,
+    <AboutContainer key={1} />,
+    <AboutContainer key={2} />,
+    <AboutContainer key={3} />,
+  ];
 
-        const handleScroll = () => {
-            const halfTop = element.scrollHeight / 2;
-            if (element.scrollTop > halfTop + buffer) {
-                element.scrollTop -= halfTop;
-            }
-            if (element.scrollTop < buffer) {
-                element.scrollTop += halfTop;
-            }
-        };
+  // Measure total height of all looped content
+  useEffect(() => {
+    if (!trackRef.current) return;
 
-        element.addEventListener("scroll", handleScroll)
-        return () => element.removeEventListener("scroll", handleScroll)
-        
-    }, []);
+    const track = trackRef.current;
+    const height = track.scrollHeight;
+    setTrackHeight(height);
+  }, []);
 
-    
-    return (
-        <AnimatedWrapper>
-            <ScrollWrapper ref={scrollRef}>
-                <LoopContainer>
-                    <AboutContainer/>
-                    <AboutContainer/>
-                    <AboutContainer/>
-                    <AboutContainer/>
-                </LoopContainer>
-            </ScrollWrapper>
-        </AnimatedWrapper>
-    );
+  // Handle scroll and transform
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || !trackHeight) return;
+
+    const handleScroll = () => {
+      const y = window.scrollY;
+      const offset = y % trackHeight;
+      track.style.transform = `translate3d(0, -${offset}px, 0)`;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [trackHeight]);
+
+  return (
+    <>
+      {/* Scrollable spacer equals track height for a smooth scroll */}
+      <div style={{ height: trackHeight || "100vh" }} />
+
+      <LoopViewport>
+        <LoopContainer ref={trackRef}>
+          {items}
+          {items}
+        </LoopContainer>
+      </LoopViewport>
+    </>
+  );
 }

@@ -15,7 +15,7 @@ const LinkButton = styled(motion.a)`
     justify-content: center;
     padding: clamp(20px, 1vmin, 30px);
     border: 5px solid ${({ $color }) => $color};
-    background-color: white;
+    background-color: transparent;
     width: 10vw;
     border-radius: 15px;
     color: ${({ $color }) => $color};

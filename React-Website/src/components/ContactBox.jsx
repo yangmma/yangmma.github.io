@@ -76,7 +76,7 @@ export default function ContactBox() {
                 </ButtonsContainer>
 
             </TextBox>
-            <BoulderImg src={Boulder} alt="Boulder" />
+            <BoulderImg src={Boulder} alt="Boulder" /> {/* This boulder needs to be replaced with an image. */}
             <div></div>
         </GridWrapper>
     )

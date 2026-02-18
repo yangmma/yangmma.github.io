@@ -68,7 +68,7 @@ export default function ContactBox() {
             <TextBox>
                 <HeaderText>Interested in collaborating? Feel free to reach out to me!</HeaderText>
                 <BodyText1>
-                    You can email me via <a href="mailto:yangmma03@gmail.com"><ColourText>yangmma03@gmail.com</ColourText></a>, or take a look at the following:
+                    You can email me via <a href="mailto:yangmma03@gmail.com"><ColourText>yangmma03 [at] gmail [.] com</ColourText></a>, or take a look at the following:
                 </BodyText1>
                 <ButtonsContainer>
                     <HoverSpotlightButton href="https://www.linkedin.com/in/mma-yang/" color="#A4C5A5">LinkedIn</HoverSpotlightButton>

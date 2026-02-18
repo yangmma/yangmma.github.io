@@ -23,8 +23,11 @@ const GridWrapper = styled.section`
     box-sizing: border-box;
 
     @media (max-width: 768px) {
-        grid-template-columns: 1fr;  /* stack on smaller screens */
+        grid-template-columns: 1fr;
         text-align: center;
+        justify-content: center;
+        gap: 0rem;
+        padding: 1.5rem;
     }
 `;
 
@@ -69,19 +72,49 @@ const BoulderWrapper = styled.div`
     position: absolute;
     cursor: pointer;
     transition: transform 0.3 ease;
+    width: auto;
 
     &:hover {
         transform: scale(1.1);
     }
 `;
 
+const BoulderWrapperWeb = styled(BoulderWrapper)`
+    height: clamp(80px, 25vh, 600px);
+`;
+
+const BoulderWrapperAI = styled(BoulderWrapper)`
+    height: clamp(60px, 10vh, 500px);
+`;
+
+const BoulderWrapperProd = styled(BoulderWrapper)`
+    height: clamp(80px, 25vh, 600px);
+`;
+
+const BoulderWrapperSoft = styled(BoulderWrapper)`
+    height: clamp(80px, 12vh, 600px);
+`;
+
+const BoulderContainer = styled.div`
+    position: relative;
+    width: 100%;
+    height: clamp(100px, 100vh, 700px);
+    margin-right: clamp(120px, 3vw, 400px);
+    margin-left: clamp(120px, 3vw, 400px);
+
+    @media (max-width: 768px) {
+        height: 500px;
+        margin: 0 auto;
+        width: 100%;
+    }
+`;
+
 const BoulderImg = styled.img`
-    width: auto;
-    max-height: 600px;
-    height: auto;
     cursor: pointer;
     transition: transform 0.25s ease, filter 0.25s ease;
     animation: ${scaleAnimation} 10s ease-in-out infinite;
+    width: auto;
+    height: 100%;
 
     &:hover {
         filter: drop-shadow(0 12px 20px rgba(100, 86, 161, 0.45));
@@ -178,14 +211,12 @@ export default function SkillsBox() {
                     ))}
                 </BodyText1>
             </TextBox>
-            <div style={{position:'relative', width:'100%', height:'clamp(320px, 100vh, 700px)'}}>
-                <BoulderWrapper
+            <BoulderContainer >
+                <BoulderWrapperWeb
                     onClick={() => setActiveSkill("web")}
                     style={{
-                        position: 'absolute', 
-                        left: '60%',
-                        bottom: '55%',
-                        height: '40%'
+                        left: 'clamp(150px, 10vw, 400px)',
+                        top: '0%'
                     }}
                 >
                     <B1 
@@ -194,15 +225,13 @@ export default function SkillsBox() {
                         $active={activeSkill === "web"} 
                         
                     />
-                </BoulderWrapper>
+                </BoulderWrapperWeb>
 
-                <BoulderWrapper
+                <BoulderWrapperAI
                     onClick={() => setActiveSkill("AI")}
                     style={{
-                        position: 'absolute', 
-                        bottom:'60%',
-                        left: '23%',
-                        height: '16%'
+                        top:'clamp(100px, 20%, 150px)',
+                        left: 'clamp(50px, 5vw, 100px)',
                     }}
                 >
                     <B2 
@@ -210,15 +239,13 @@ export default function SkillsBox() {
                         alt="Boulder" 
                         $active={activeSkill === "AI"} 
                     />
-                </BoulderWrapper>
+                </BoulderWrapperAI>
 
-                <BoulderWrapper
+                <BoulderWrapperProd
                     onClick={() => setActiveSkill("prod")}
                     style={{
-                        position: 'absolute',
-                        bottom: '30%',
-                        left: '-10%',
-                        height: '35%'
+                        top: 'clamp(100px, 35%, 220px)',
+                        left: '1vw'
                     }}
                 >
                     <B3 
@@ -226,14 +253,13 @@ export default function SkillsBox() {
                         alt="Boulder" 
                         $active={activeSkill === "prod"} 
                     />
-                </BoulderWrapper>
+                </BoulderWrapperProd>
                 
-                <BoulderWrapper
+                <BoulderWrapperSoft
                     onClick={() => setActiveSkill("soft")}
                     style={{
-                        position: 'absolute',
-                        bottom: '5%',
-                        left: '55%'
+                        top: 'clamp(150px, 80%, 500px)',
+                        left: 'clamp(180px, 10vw, 400px)'
                     }}
                 >
                     <B4 
@@ -241,9 +267,9 @@ export default function SkillsBox() {
                         alt="Boulder" 
                         $active={activeSkill === "soft"} 
                     />
-                </BoulderWrapper>
+                </BoulderWrapperSoft>
                 
-            </div>
+            </BoulderContainer>
             <div></div>
         </GridWrapper>
     )

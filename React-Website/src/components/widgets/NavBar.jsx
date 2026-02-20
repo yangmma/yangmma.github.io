@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 
-const Wrapper = styled.section`
+const Wrapper = styled.nav`
     background-color: black;
     padding: 1.5rem 1.5rem;
     top: 0;

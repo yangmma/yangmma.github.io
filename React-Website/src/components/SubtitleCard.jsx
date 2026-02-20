@@ -9,6 +9,7 @@ const SubheadingCard = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #E9E9E9;
+
 `;
 
 const HeaderText2 = styled.h1`

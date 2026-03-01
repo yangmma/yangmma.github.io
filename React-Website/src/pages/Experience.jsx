@@ -31,14 +31,14 @@ export default function Page2() {
     return (
         <>
             {/* Work Experience Section */}
-            <TitleCard marginTop={'6rem'}>Work</TitleCard>
+            <TitleCard $marginTop={'6rem'}>WORK</TitleCard>
             <SubtitleCard heading1={work1title} heading2={work1subtitle} heading3={work1date}/>
             <BodyCard body={work1body} image={Logo1}/>
             <SubtitleCard heading1={work2title} heading2={work2subtitle} heading3={work2date}/>
             <BodyCard body={work2body} image={Logo2}/>
 
             {/* Projects Section */}
-            <TitleCard marginTop={'0'}>Projects</TitleCard>
+            <TitleCard $marginTop={'0'}>PROJECTS</TitleCard>
             <ProjectsContainer/>
         </>
         

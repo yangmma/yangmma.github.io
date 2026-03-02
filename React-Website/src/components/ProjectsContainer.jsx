@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
+import { useState, useEffect } from "react";
 
-/* Image Imports */
-import CampusGuessr from '../assets/campussguessr.png';
 
 const ProjContainer = styled.div`
     width: 100%;
     min-height: 80vh;
     display: flex;
+    flex-wrap: wrap
     box-sizing: border-box;
     gap: 2rem;
-    justify-content: flex-start;
-    position: relative;
+    justify-content: center;
 
     @media (max-width: 1100px) {
         justify-content: center;
         text-align: center;
         width: 100%;
+        max-width: 100vw;
     }
 `;
 
@@ -28,22 +28,13 @@ TO-DO:
 */
 
 
-const projects = [
-    {
-        id: 1,
-        tag: "web",
-        title: "CAMPUSGUESSR",
-        image: CampusGuessr,
-        description: "In my Software Tools and Techniques class (COMPSCI 732) I led UI/UX design and frontend development for a campus navigation web application. The idea for this application was to promote the learning of campus locations through gameification by drawing inspiration from Wordle and Geoguessr. I also assisted with backend and database integration.",
-        tools: ["figma", "react", "typescript", "mongoDB", "express.js", "node.js"],
-        links: {
-            report: "TBC",
-            live: "https://campusguessr.fly.dev/",
-        }
-    }
-];
-
 export default function ProjectsContainer () {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        fetch('/json_files/projects.json').then(res => res.json()).then(data => setProjects(data))
+    }, [])
+
     return (
         <>
         <ProjContainer>

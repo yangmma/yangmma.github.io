@@ -9,7 +9,7 @@ const BodyTextCard = styled.div`
     justify-content: center;
     gap: 2rem;  
     min-height: 60vh;
-    width: 100%;
+    width: 95%;
     align-items: center;
     
 

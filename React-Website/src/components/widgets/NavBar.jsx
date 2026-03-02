@@ -11,6 +11,7 @@ const Wrapper = styled.nav`
     justify-content: flex-end;
     z-index: 1000;
     width: 100%;
+    max-width: 100vw;
     display: flex;
     box-sizing: border-box;
     `;

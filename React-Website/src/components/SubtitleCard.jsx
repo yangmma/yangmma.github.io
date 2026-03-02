@@ -13,6 +13,7 @@ const SubheadingCard = styled.div`
 `;
 
 const HeaderText2 = styled.h1`
+    font-size: clamp(2rem, 8vw, 6rem);
     font-family: 'Inter', sans-serif; 
     font-weight: 500;
     margin: 0;
@@ -21,6 +22,7 @@ const HeaderText2 = styled.h1`
 `
 
 const HeaderText3 = styled.h1`
+    font-size: clamp(2rem, 8vw, 4rem); 
     font-family: 'Inter', sans-serif; 
     font-weight: normal;
     margin: 0;

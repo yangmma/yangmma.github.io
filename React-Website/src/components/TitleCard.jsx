@@ -15,7 +15,7 @@ const HeadingCard = styled.div`
 
 const HeaderText = styled.h1`
     font-family: 'Inter', sans-serif; 
-    font-size: clamp(5rem, 8vw, 8rem);
+    font-size: clamp(3rem, 8vw, 8rem);
 `;
 
 export default function TitleCard ( {children, $marginTop} ) {

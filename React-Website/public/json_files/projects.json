@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "variant": "A",
+        "tag": "web",
+        "title": "CAMPUSGUESSR",
+        "image": "/images/campussguessr.png",
+        "description": "In my Software Tools and Techniques class (COMPSCI 732) I led UI/UX design and frontend development for a campus navigation web application. The idea for this application was to promote the learning of campus locations through gameification by drawing inspiration from Wordle and Geoguessr. I also assisted with backend and database integration.",
+        "tools": ["figma", "react", "typescript", "mongoDB", "express.js", "node.js"],
+        "links": {
+            "report": "TBC",
+            "note": "Further information available upon request."
+        }
+    }
+]

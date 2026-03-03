@@ -8,10 +8,12 @@ const ProjContainer = styled.div`
     width: 100%;
     min-height: 80vh;
     display: flex;
-    flex-wrap: wrap
+    flex-direction: column;
     box-sizing: border-box;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 
     @media (max-width: 1100px) {
         justify-content: center;
@@ -38,7 +40,7 @@ export default function ProjectsContainer () {
     return (
         <>
         <ProjContainer>
-            {projects.map((project) => (
+            {[...projects].reverse().map((project) => (
                 <ProjectCard key={project.id} data={project} />
             ))}
         </ProjContainer>

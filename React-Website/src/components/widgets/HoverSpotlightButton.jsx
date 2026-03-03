@@ -13,7 +13,7 @@ const LinkButton = styled(motion.a)`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(20px, 1vmin, 30px);
+    padding: clamp(25px, 1vmin, 30px);
     border: 5px solid ${({ $color }) => $color};
     background-color: transparent;
     width: 10vw;
@@ -31,6 +31,7 @@ const ButtonText = styled.span`
     pointer-events: none;
     position: relative;
     z-index: 2;
+    font-size: clamp(12px, 4vmin, 30px);
 `;
 
 const Spotlight = styled.span`

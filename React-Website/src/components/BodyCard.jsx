@@ -9,11 +9,12 @@ const BodyTextCard = styled.div`
     justify-content: center;
     gap: 2rem;  
     min-height: 60vh;
-    width: 95%;
+    width: 90%;
+    margin: 0 auto;
     align-items: center;
     
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         grid-template-columns: 1fr; 
         text-align: center;
         padding: 2rem;

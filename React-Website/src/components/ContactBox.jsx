@@ -5,19 +5,24 @@ import HoverSpotlightButton from './widgets/HoverSpotlightButton';
 
 const GridWrapper = styled.section`
     display: grid;
-    grid-template-columns: 0.1fr 0.6fr 0.2fr 0.1fr;
+    grid-template-columns: 0.6fr 0.4fr;
     gap: 2rem;
     align-items: center;
     justify-items: center;
-    padding: 3rem;
-
+    margin-left: 10rem;
+    margin-right: 10rem;
     min-height: 100vh;
-    min-width: 100vw;
     box-sizing: border-box;
 
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;  /* stack on smaller screens */
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
         text-align: center;
+        margin: 4rem;
+        min-height: 0px;
+    }
+
+    @media (max-width: 500px) {
+        margin: 4rem 0.5em 4rem 0.5rem;
     }
 `;
 
@@ -50,6 +55,10 @@ const ProfileImg = styled.img`
     height: auto;
     border: 5px solid #A4C5A5;
     border-radius: 250px;
+
+    @media (max-width: 500px) {
+        width: 80%;
+    }
 `;
 
 const ButtonsContainer = styled.div`
@@ -57,7 +66,7 @@ const ButtonsContainer = styled.div`
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
-    @media (max-width:768px) {
+    @media (max-width:900px) {
         justify-content: center;
     }
 `;
@@ -65,7 +74,6 @@ const ButtonsContainer = styled.div`
 export default function ContactBox() {
     return (
         <GridWrapper>
-            <div></div>
             <TextBox>
                 <HeaderText>Interested in collaborating? Feel free to reach out to me!</HeaderText>
                 <BodyText1>
@@ -77,7 +85,6 @@ export default function ContactBox() {
                 </ButtonsContainer>
             </TextBox>
             <ProfileImg src={Profile} alt="Profile Photo" />
-            <div></div>
         </GridWrapper>
     )
 }

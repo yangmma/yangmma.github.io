@@ -30,6 +30,7 @@ const LoopContainer = styled.div`
     will-change: transform;
     display: flex;
     flex-direction: column;
+    gap: 4rem;
 `
 
 

@@ -8,18 +8,22 @@ const Wrapper = styled.nav`
     top: 0;
     align-items: center;
     position: fixed;
-    justify-content: flex-end;
+    
     z-index: 1000;
     width: 100%;
     max-width: 100vw;
     display: flex;
+    flex-direction: row;
     box-sizing: border-box;
+    justify-content: flex-end;
     `;
+
+
 
 const LinksDiv = styled.div`
     display: flex;
     gap: 2rem;
-    `
+    `;
 
 const StyledNavbarLink = styled(NavLink)`
     color: #AFAFAF;

@@ -12,23 +12,29 @@ import Boulder4Active from '../assets/Group 27(1).svg';
 
 const GridWrapper = styled.section`
     display: grid;
-    grid-template-columns: 0.1fr 0.6fr 0.2fr 0.1fr;
+    grid-template-columns: 0.6fr 0.4fr;
     gap: 2rem;
     align-items: center;
     justify-items: center;
-    padding: 3rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
 
     min-height: 100vh;
-    min-width: 100vw;
     box-sizing: border-box;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+        gap: 0.5rem;
         grid-template-columns: 1fr;
         text-align: center;
         justify-content: center;
-        gap: 0rem;
-        padding: 1.5rem;
+        margin: 4rem;
     }
+
+    @media (max-width: 500px) {
+        margin: 4rem 0.5em 4rem 0.5rem;
+    }
+
+
 `;
 
 const TextBox = styled.div`
@@ -43,6 +49,8 @@ const TextBox = styled.div`
 const BodyText1 = styled.p`
     font-family: 'Inter', sans-serif; 
     font-size: clamp(0.5rem, 3vw, 2rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
 `;
 
 const HeaderText = styled.h1`
@@ -69,43 +77,69 @@ const scaleAnimation = keyframes`
 `;
 
 const BoulderWrapper = styled.div`
-    position: absolute;
+    position: relative;
+    display: flex;
     cursor: pointer;
     transition: transform 0.3 ease;
-    width: auto;
-
-    &:hover {
-        transform: scale(1.1);
+    @media (max-width: 500px) {
+        margin: 4rem 0.5em 4rem 0.5rem;
     }
 `;
 
 const BoulderWrapperWeb = styled(BoulderWrapper)`
-    height: clamp(80px, 25vh, 600px);
+    grid-row: 1;
+    grid-column: 2;
+    height: clamp(210px, 13vw, 500px);
+
 `;
 
 const BoulderWrapperAI = styled(BoulderWrapper)`
-    height: clamp(60px, 10vh, 500px);
+    grid-row: 1;
+    grid-column: 1;
+    height: clamp(80px, 5vw, 500px);
+    align-self: end;
+    justify-self: end;
+    
 `;
 
 const BoulderWrapperProd = styled(BoulderWrapper)`
-    height: clamp(80px, 25vh, 600px);
+    grid-row: 2;
+    grid-column: 1;
+    height: clamp(210px, 12vw, 500px);
+    align-self: start;
+    justify-self: end;
+    transform: translate(40px, -30px);
+
+    @media (max-width: 500px) {
+        transform: translate(40px, -140px)
+    }
 `;
 
 const BoulderWrapperSoft = styled(BoulderWrapper)`
-    height: clamp(80px, 12vh, 600px);
+    grid-row: 2;
+    grid-column: 2;
+    height: clamp(80px, 5vw, 500px);
+    align-self: end;
+    justify-self: start;
+    margin-left: 20%;
+    transform: translateY(60px);
+    @media (max-width: 500px) {
+        transform: translateY(60px);
+        align-self: start;
+    }
 `;
 
 const BoulderContainer = styled.div`
     position: relative;
-    width: 100%;
-    height: clamp(100px, 100vh, 700px);
-    margin-right: clamp(120px, 3vw, 400px);
-    margin-left: clamp(120px, 3vw, 400px);
-
-    @media (max-width: 768px) {
-        height: 500px;
-        margin: 0 auto;
-        width: 100%;
+    justify-self: start;
+    align-self: center;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    @media (max-width: 500px) {
+        align-self: start;
+        transform: translate(-20px, -80px);
     }
 `;
 
@@ -198,7 +232,6 @@ export default function SkillsBox() {
 
     return (
         <GridWrapper>
-            <div></div>
             <TextBox>
                 <HeaderText>Some of my key skills include {" "}
                     <ColourText>
@@ -214,10 +247,6 @@ export default function SkillsBox() {
             <BoulderContainer >
                 <BoulderWrapperWeb
                     onClick={() => setActiveSkill("web")}
-                    style={{
-                        left: 'clamp(150px, 10vw, 400px)',
-                        top: '0%'
-                    }}
                 >
                     <B1 
                         src={getImgSrc("web")} 
@@ -229,10 +258,6 @@ export default function SkillsBox() {
 
                 <BoulderWrapperAI
                     onClick={() => setActiveSkill("AI")}
-                    style={{
-                        top:'clamp(100px, 20%, 150px)',
-                        left: 'clamp(50px, 5vw, 100px)',
-                    }}
                 >
                     <B2 
                         src={getImgSrc("AI")} 
@@ -243,10 +268,6 @@ export default function SkillsBox() {
 
                 <BoulderWrapperProd
                     onClick={() => setActiveSkill("prod")}
-                    style={{
-                        top: 'clamp(100px, 35%, 220px)',
-                        left: '1vw'
-                    }}
                 >
                     <B3 
                         src={getImgSrc("prod")} 
@@ -257,10 +278,6 @@ export default function SkillsBox() {
                 
                 <BoulderWrapperSoft
                     onClick={() => setActiveSkill("soft")}
-                    style={{
-                        top: 'clamp(150px, 80%, 500px)',
-                        left: 'clamp(180px, 10vw, 400px)'
-                    }}
                 >
                     <B4 
                         src={getImgSrc("soft")} 
@@ -270,7 +287,6 @@ export default function SkillsBox() {
                 </BoulderWrapperSoft>
                 
             </BoulderContainer>
-            <div></div>
         </GridWrapper>
     )
 }

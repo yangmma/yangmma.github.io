@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Boulder from '../assets/Group 23.svg';
+import Profile from '/images/ProfilePhoto.png';
 import HoverSpotlightButton from './widgets/HoverSpotlightButton';
 
 const GridWrapper = styled.section`
@@ -44,11 +44,12 @@ const ColourText = styled.span`
     text-decoration: underline;
 `;
 
-const BoulderImg = styled.img`
-    width: 90%;
-    left: 1rem;
+const ProfileImg = styled.img`
+    width: 100%;
     max-width: 400px;
     height: auto;
+    border: 5px solid #A4C5A5;
+    border-radius: 250px;
 `;
 
 const ButtonsContainer = styled.div`
@@ -74,9 +75,8 @@ export default function ContactBox() {
                     <HoverSpotlightButton href="https://www.linkedin.com/in/mma-yang/" color="#A4C5A5">LinkedIn</HoverSpotlightButton>
                     <HoverSpotlightButton href="https://github.com/yangmma" color="#A4C5A5">GitHub</HoverSpotlightButton>
                 </ButtonsContainer>
-
             </TextBox>
-            <BoulderImg src={Boulder} alt="Boulder" /> {/* This boulder needs to be replaced with an image. */}
+            <ProfileImg src={Profile} alt="Profile Photo" />
             <div></div>
         </GridWrapper>
     )

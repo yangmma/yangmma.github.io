@@ -25,7 +25,7 @@
         "tag": "web",
         "title": "CampusGuessr",
         "image": "/images/campussguessr.png",
-        "description": "In my Software Tools and Techniques class (COMPSCI 732) I led UI/UX design and frontend development for a campus navigation web application. The idea for this application was to promote the learning of campus locations through gameification by drawing inspiration from Wordle and Geoguessr. I also assisted with backend and database integration.",
+        "description": "In my Software Tools and Techniques class (COMPSCI 732) I led UI/UX design and frontend development for a campus navigation web application. The idea for this application was to promote the learning of campus locations through gameification by drawing inspiration from Wordle and Geoguessr. I also assisted with backend and database integration. Repository and further details can be provided on request.",
         "tools": ["figma", "react", "typescript", "mongoDB", "express.js", "node.js"],
         "links": [{"Report": "/files/myan565 732 Project Report.pdf"}]
     },
@@ -33,9 +33,9 @@
         "id": 4,
         "variant": "C",
         "tag": "research",
-        "title": "Multi-Player Interaction w/ AI Dance Models",
+        "title": "Multi-Player Dance w/ AI Models",
         "image": "/images/AI Agent.png",
-        "description": "For my Bachelor of Science (Honours) thesis, I had the pleasure of specialising in Human Computer Interaction and conducting a research study on interaction designs for multi-player dance with a deep-learning model. This paper involved design, development, and user studies, and has since been accepted into the MOCO'26 conference in Montpellier, France. Publication link will be posted shortly.",
+        "description": "For my Bachelor of Science (Honours) thesis, I had the pleasure of specialising in Human Computer Interaction and conducting a research study on interaction designs for real-time multi-player dance with a deep-learning model. This paper involved design, development, and user studies, and has since been accepted into the MOCO'26 conference in Montpellier, France. Publication link will be posted shortly.",
         "tools": ["python", "pytorch", "unity", "c#", "overleaf"],
         "links":  []
     }

@@ -165,7 +165,6 @@ export default function ProjectCardA ( { data } ) {
                                     <HoverSpotlightButton key={index} href={url} target="_blank">{label}</HoverSpotlightButton>
                                 );
                             })}
-                            <p>Further information can be provided upon request.</p>
                         </ButtonHolder>
                     )}
                 </RightColumn>

@@ -124,9 +124,8 @@ const ToolContainer = styled.button`
     font-family: 'Inter', sans-serif; 
     font-weight: normal;
     font-size: 14px;
-    border: solid 2px #6456A1;
     border-radius: 10px;
-    background: transparent;
+    background: rgba(0,0,0, 0.1);
     margin: 0.3rem;
     pointer-events: none;
 

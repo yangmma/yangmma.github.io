@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "variant": "C",
+        "tag": "robotics",
+        "title": "Pay-To-Win Kettle",
+        "image": "/images/IMG_0492.png",
+        "description": "For the 2023 End-Of-Year Terrible Ideas Hackathon, my team and I constructed the Pay-To-Win 'Amazon' Kettle. The goal of this 46-hour hackathon was to come up with and build a terrible idea. Ours was a kettle which requires you to listen to a full ad, without skipping, in order to use it.",
+        "tools": ["python", "pygame", "raspberry pi"],
+        "links": [{"Demo": "https://www.youtube.com/watch?v=8YhfTXzSJgk"}]
+    },
+    {
+        "id": 2,
+        "variant": "B",
+        "tag": "research",
+        "title": "Automated Feedback for Variable Naming",
+        "image": "/images/AutomatedFeedback.png",
+        "description": "In my Computing Education (COMPSCI 747) course, I co-authored a research paper exploring the use of Large Language Models in providing automated feedback for variable naming in programming assignments for CS1 students.",
+        "tools": ["rstudio", "overleaf"],
+        "links": [{"Paper": "/files/COMPSCI747_final_report.pdf"}]
+    },
+    {
+        "id": 3,
+        "variant": "A",
+        "tag": "web",
+        "title": "CampusGuessr",
+        "image": "/images/campussguessr.png",
+        "description": "In my Software Tools and Techniques class (COMPSCI 732) I led UI/UX design and frontend development for a campus navigation web application. The idea for this application was to promote the learning of campus locations through gameification by drawing inspiration from Wordle and Geoguessr. I also assisted with backend and database integration. Repository and further details can be provided on request.",
+        "tools": ["figma", "react", "typescript", "mongoDB", "express.js", "node.js"]
+    },
+    {
+        "id": 4,
+        "variant": "C",
+        "tag": "research",
+        "title": "Multi-Player Dance w/ AI Models",
+        "image": "/images/AI Agent.png",
+        "description": "For my Bachelor of Science (Honours) thesis, I had the pleasure of specialising in Human Computer Interaction and conducting a research study on interaction designs for real-time multi-player dance with a deep-learning model. This paper involved design, development, and user studies, and has since been accepted into the MOCO'26 conference in Montpellier, France. Publication link will be posted shortly.",
+        "tools": ["python", "pytorch", "unity", "c#", "overleaf"],
+        "links":  []
+    }
+    
+]

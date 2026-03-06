@@ -35,7 +35,7 @@
         "title": "Multi-Player Dance w/ AI Models",
         "image": "/images/AI Agent.png",
         "description": "For my Bachelor of Science (Honours) thesis, I had the pleasure of specialising in Human Computer Interaction and conducting a research study on interaction designs for real-time multi-player dance with a deep-learning model. This paper involved design, development, and user studies, and has since been accepted into the MOCO'26 conference in Montpellier, France. Publication link will be posted shortly.",
-        "tools": ["python", "pytorch", "unity", "c#", "overleaf"],
+        "tools": ["python", "pytorch", "unity", "c#", "motion tracking", "overleaf"],
         "links":  []
     }
     

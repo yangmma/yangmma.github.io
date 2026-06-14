@@ -1,10 +1,12 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+
 import Page1 from "./pages/Home";
 import Page2 from "./pages/About";
 import Page3 from "./pages/Projects";
 import Page4 from "./pages/Experience";
 import Page5 from "./pages/Publications";
+import Footer from "./components/widgets/Footer";
 import './App.css'; 
 
 // components:
@@ -27,6 +29,7 @@ function AppContent() {
             <Route path="/experience" element={<Page4/>} />
             <Route path="/publications" element={<Page5/>} />
         </Routes>
+        <Footer/>
       </div>
     </div>
   )

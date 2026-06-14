@@ -2,25 +2,23 @@ import styled from "styled-components";
 
 import Introduction from "../components/Introduction";
 import Navigation from "../components/Navigation";
+import Footer from "../components/widgets/Footer";
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr;
+  grid-template-rows: 2fr;
   place-items: center;
-  gap: 6rem;
+  gap: 4rem;
 `;
-
-const Bolded = styled.span`
-    font-weight: 600;
-`
 
 export default function Page1() {
   return (
-    <Container>
-      <Introduction/>
-      <Navigation/>
-      <p>yangmma03 [at] gmail [dot] com <Bolded>|</Bolded> /in/mma-yang/</p>
-    </Container>
+    <>
+      <Container>
+        <Introduction/>
+        <Navigation/>
+      </Container>
+    </>
   );
 }

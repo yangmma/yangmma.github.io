@@ -43,7 +43,12 @@ h2 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: #413C58;
+}
+
+li {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: #413C58;
 }
 

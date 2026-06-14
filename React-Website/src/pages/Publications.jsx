@@ -2,11 +2,11 @@ import React from "react";
 import PageLayout from "../components/PageLayout";
 
 
-export default function Page4() {
+export default function Page5() {
 
     return (
         <>
-            <PageLayout>Experience</PageLayout>
+            <PageLayout>Publications</PageLayout>
         </>
         
     );

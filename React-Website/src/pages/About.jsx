@@ -1,85 +1,54 @@
-import React, { useRef, useEffect, useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import AboutContainer from '../components/AboutContainer';
+import PageLayout from "../components/PageLayout";
+import Profile from "../assets/ProfilePhoto(2).png"
 
-const Animation = keyframes`
-    0% {
-    opacity: 0;
-    transform: translateY(50px);
-    }
-
-    100% {
-    opacity: 1;
-    transform: translateY(0)
-    }
+const AboutContainer = styled.div`
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    margin: 0;
+    gap: 2rem;
 `;
 
-const AnimatedWrapper = styled.div`
-    animation: ${Animation} 2s ease-out forwards;
-    z-index:2;
+const LeadingText = styled.h2`
+    font-size: 3rem;
+    grid-row: 1;
+    grid-column: 1;
+    font-weight: 400;
+`;
+
+const Bolded = styled.span`
+    font-weight: 700;
+`;
+
+const BodyText = styled.p`
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    white-space: pre-line;
+    margin: 0;
+`;  
+
+const ProfilePhoto = styled.img`
+    grid-row: 1;
+    grid-column: 2;
 `
 
-const LoopViewport = styled.div`
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
-`
 
-const LoopContainer = styled.div`
-    will-change: transform;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-`
+export default function Page2() {
 
+    const text = "I take a human-centered approach to my software engineering and research projects, which is informed heavily by my background in Psychology and Human Computer Interaction. I do my best to carefully understand the behaviours, desires, and frustrations of the people I work with, and to accommodate these needs into my work. \n\nI am comfortable working with Python (including machine learning and statistics libraries such as PyTorch), React, TailwindCSS, MongoDB, PostgreSQL, Figma, and Express / Node.js.";
 
-export default function Page1() {
-  const trackRef = useRef(null);
-  const [trackHeight, setTrackHeight] = useState(0);
-
-  const items = [
-    <AboutContainer key={0} />,
-    <AboutContainer key={1} />,
-    <AboutContainer key={2} />,
-    <AboutContainer key={3} />,
-  ];
-
-  // Measure total height of all looped content
-  useEffect(() => {
-    if (!trackRef.current) return;
-
-    const track = trackRef.current;
-    const height = track.scrollHeight;
-    setTrackHeight(height);
-  }, []);
-
-  // Handle scroll and transform
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track || !trackHeight) return;
-
-    const handleScroll = () => {
-      const y = window.scrollY;
-      const offset = y % trackHeight;
-      track.style.transform = `translate3d(0, -${offset}px, 0)`;
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [trackHeight]);
-
-  return (
-    <>
-      {/* Scrollable spacer equals track height for a smooth scroll */}
-      <div style={{ height: trackHeight || "100vh" }} />
-
-      <LoopViewport>
-        <LoopContainer ref={trackRef}>
-          {items}
-          {items}
-        </LoopContainer>
-      </LoopViewport>
-    </>
-  );
+    return (
+        <div>
+            <PageLayout>About</PageLayout>
+            <AboutContainer>
+                <LeadingText>My goal is to design and build products that are <Bolded>accessible</Bolded> and <Bolded>useful</Bolded> to those that need them. </LeadingText>
+                <BodyText>{text}</BodyText>
+                <ProfilePhoto src={Profile} alt="My profile photo."/>
+            </AboutContainer>
+        </div>
+        
+    );
 }

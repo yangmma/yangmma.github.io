@@ -11,7 +11,7 @@ const AboutContainer = styled.div`
     margin: 0;
     gap: 2rem;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1260px) {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
@@ -24,7 +24,7 @@ const LeadingText = styled.h2`
     font-weight: 400;
     margin: 2rem 0 0 0;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1260px) {
         grid-row: auto;
         grid-column: 1;
     }
@@ -42,7 +42,7 @@ const BodyText = styled.p`
 const BodyText1 = styled(BodyText)`
     grid-row: 2;
     grid-column: 1;
-    @media (max-width: 1000px) {
+    @media (max-width: 1260px) {
         grid-row: auto;
         grid-column: 1;
     }
@@ -51,7 +51,7 @@ const BodyText1 = styled(BodyText)`
 const BodyText2 = styled(BodyText)`
     grid-row: 3;
     grid-column: 1 / span 2;
-    @media (max-width: 1000px) {
+    @media (max-width: 1260px) {
         grid-row: auto;
         grid-column: 1;
     }
@@ -60,7 +60,7 @@ const BodyText2 = styled(BodyText)`
 const BodyText3 = styled(BodyText)`
     grid-row: 4;
     grid-column: 1 / span 2;
-    @media (max-width: 1000px) {
+    @media (max-width: 1260px) {
         grid-row: auto;
         grid-column: 1;
     }
@@ -73,7 +73,7 @@ const ProfilePhoto = styled.img`
     justify-self: center;
     align-self: center;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1260px) {
         grid-row: auto;
         grid-column: 1;
         padding-top: 2rem;

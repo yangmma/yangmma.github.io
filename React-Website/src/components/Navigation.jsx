@@ -114,8 +114,8 @@ export default function Navigation () {
         <NavGrid>
             <ProjectsSquare to="/projects">Projects</ProjectsSquare>
             <ExperienceSquare to="/experience">Experience</ExperienceSquare>
-            <PublicationsSquare to="/publications">Publication(s)</PublicationsSquare>
             <AboutSquare to="/about">About</AboutSquare>
+            <PublicationsSquare to="/publications">Publication(s)</PublicationsSquare>
         </NavGrid>
     )
 }

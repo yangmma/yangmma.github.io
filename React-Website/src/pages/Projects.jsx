@@ -9,11 +9,42 @@ import Feedback from "../assets/AutomatedFeedback.png";
 import Kettle from "../assets/kettle.png";
 import CampusGuessr from "../assets/campussguessr.png";
 
+const MobileContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @media (min-width: 1260px) {
+        display: none;
+    }
+`;
+
+const MobileEvent = styled.div`
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+`;
+
+const MobileTitle = styled.h1`
+    font-size: 4rem;
+`;
+
+const MobileText = styled.p`
+`;
+
+const MobilePhoto = styled.img`
+    display: block;
+    width: 60%;
+    margin: 2rem auto 0;
+`;
+
 const ProjectsContainer = styled.div`
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+
+    @media (max-width: 1260px) {
+        display: none;
+    }
 `;
 
 const ProjectsList = styled.ol`
@@ -89,8 +120,30 @@ export default function Page3() {
                 </ProjectsList>
                 <TextBox>{projects[selectedProject].text}</TextBox>
                 <ProjectPhoto src={projects[selectedProject].image}/>
-
             </ProjectsContainer>
+
+            <MobileContainer>
+                <MobileEvent>
+                    <MobileTitle>Multi-Player Dance w/ AI Models</MobileTitle>
+                    <MobileText>{projects.multiplayer.text}</MobileText>
+                    <MobilePhoto src={projects.multiplayer.image} />
+                </MobileEvent>
+                <MobileEvent>
+                    <MobileTitle>CampusGuessr</MobileTitle>
+                    <MobileText>{projects.campusguessr.text}</MobileText>
+                    <MobilePhoto src={projects.campusguessr.image} />
+                </MobileEvent>
+                <MobileEvent>
+                    <MobileTitle>Automated Feedback for Variable Naming</MobileTitle>
+                    <MobileText>{projects.feedback.text}</MobileText>
+                    <MobilePhoto src={projects.feedback.image} />
+                </MobileEvent>
+                <MobileEvent>
+                    <MobileTitle>Pay-To-Win Kettle</MobileTitle>
+                    <MobileText>{projects.kettle.text}</MobileText>
+                    <MobilePhoto src={projects.kettle.image} />
+                </MobileEvent>
+            </MobileContainer>
         </>
         
     );

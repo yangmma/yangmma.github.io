@@ -9,7 +9,7 @@ import Event from "../assets/Ellipse 114.svg";
 
 const MobileTimeline = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding-top: 2rem;
     gap: 2rem;
     @media (min-width: 1260px) {

@@ -7,10 +7,6 @@ const PubsContainer = styled.div`
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
     gap: 2rem;
-
-    @media (max-width: 1260px) {
-        display: none;
-    }
 `;
 
 const PubsList = styled.ol`

@@ -20,7 +20,7 @@ const ProjectsSquare = styled(Link)`
     background: transparent;
     border-radius: 10px;
     font-size: 6rem;
-    padding: 0 0 0.5rem 1rem;
+    padding: 0.5rem;
 
     display: flex;
     align-items: flex-end;
@@ -28,6 +28,8 @@ const ProjectsSquare = styled(Link)`
     @media (max-width: 1000px) {
         grid-row: auto;
         grid-column: 1;
+        font-size: 2.5rem;
+        padding: 1rem;
     }
 
     &:hover{
@@ -44,7 +46,7 @@ const ExperienceSquare = styled(Link)`
     background: transparent;
     border-radius: 10px;
     font-size: 4rem;
-    padding: 0 0 0.5rem 1rem;
+    padding: 0.5rem;
 
     display: flex;
     align-items: flex-end;
@@ -52,6 +54,8 @@ const ExperienceSquare = styled(Link)`
     @media (max-width: 1000px) {
         grid-row: auto;
         grid-column: 1;
+        font-size: 2.5rem;
+        padding: 1rem;
     }
 
     &:hover{
@@ -68,7 +72,7 @@ const PublicationsSquare = styled(Link)`
     background: transparent;
     border-radius: 10px;
     font-size: 3rem;
-    padding: 0 0 0.5rem 1rem;
+    padding: 0.5rem;
 
     display: flex;
     align-items: flex-end;
@@ -76,6 +80,8 @@ const PublicationsSquare = styled(Link)`
     @media (max-width: 1000px) {
         grid-row: auto;
         grid-column: 1;
+        font-size: 2.5rem;
+        padding: 1rem;
     }
 
     &:hover{
@@ -92,14 +98,15 @@ const AboutSquare = styled(Link)`
     background: transparent;
     border-radius: 10px;
     font-size: 4rem;
-    padding: 0 0 0.5rem 1rem;
-
+    padding: 0.5rem;
     display: flex;
     align-items: flex-end;
 
     @media (max-width: 1000px) {
         grid-row: auto;
         grid-column: 1;
+        font-size: 2.5rem;
+        padding: 1rem;
     }
 
     &:hover{

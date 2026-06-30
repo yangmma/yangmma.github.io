@@ -8,6 +8,7 @@ import Multiplayer from "../assets/AI Agent.png";
 import Feedback from "../assets/AutomatedFeedback.png";
 import Kettle from "../assets/kettle.png";
 import CampusGuessr from "../assets/campussguessr.png";
+import CCTV from '../assets/cctv.png';
 
 const MobileContainer = styled.div`
     display: flex;
@@ -23,8 +24,7 @@ const MobileEvent = styled.div`
     padding-bottom: 2rem;
 `;
 
-const MobileTitle = styled.h1`
-    font-size: 4rem;
+const MobileTitle = styled.h2`
 `;
 
 const MobileText = styled.p`
@@ -74,6 +74,7 @@ const ProjectPhoto = styled.img`
 
 const ProjectItem = styled.li`
     font-weight: ${({ active }) => (active ? "700" : "100")};
+    text-decoration: ${({ active }) => (active ? "underline" : "none")};
     cursor: pointer;
 `;
 
@@ -81,8 +82,12 @@ export default function Page3() {
 
     const projects = {
         multiplayer: {
-            text: "For my Bachelor of Science (Honours) thesis, I had the pleasure of specialising in Human Computer Interaction and conducting a research study on interaction designs for real-time multi-player dance with a deep-learning model. This paper involved design, development, and user studies, and has since been accepted into the MOCO'26 conference in Montpellier, France. This is also listed under the 'publications' tab of this website.",
+            text: "For my Bachelor of Science (Honours) thesis, I had the pleasure of specialising in Human Computer Interaction and conducting a research study on interaction designs for real-time multi-player dance with a deep-learning model. This paper involved design, development, and user studies, and has since been accepted into the MOCO'26 conference in Montpellier, France, for which I gave a conference talk. This is also listed under the 'publications' tab of this website.",
             image: Multiplayer,
+        },
+        cctv: {
+            text: <>I built a <a style={{ textDecoration: "underline" }} href='https://cctvtheband.com/' target="_blank"> website</a> for my first band, CCTV, which has since stopped performing. The prompt for this website was to create a 'silly, retro-style environment' that also provides essential information for anyone interested in booking the band. The website was built using Vue.js and also features a GIGS page that automatically scans the RSS feed of gig website UTR for upcoming shows involving the band.</>,
+            image: CCTV,
         },
         campusguessr: {
             text: "In my Software Tools and Techniques class (COMPSCI 732) I led UI/UX design and frontend development for a campus navigation web application. The idea for this application was to promote the learning of campus locations through gameification by drawing inspiration from Wordle and Geoguessr. I also assisted with backend and database integration. Repository and further details can be provided on request.",
@@ -108,6 +113,9 @@ export default function Page3() {
                     <ProjectItem active={selectedProject === "multiplayer"} onClick={() => setSelectedProject("multiplayer")}>
                         Multi-Player Dance w/ AI Models
                     </ProjectItem>
+                    <ProjectItem active={selectedProject === "cctv"} onClick={() => setSelectedProject("cctv")}>
+                        CCTV
+                    </ProjectItem>
                     <ProjectItem active={selectedProject === "campusguessr"} onClick={() => setSelectedProject("campusguessr")}>
                         CampusGuessr
                     </ProjectItem>
@@ -127,6 +135,11 @@ export default function Page3() {
                     <MobileTitle>Multi-Player Dance w/ AI Models</MobileTitle>
                     <MobileText>{projects.multiplayer.text}</MobileText>
                     <MobilePhoto src={projects.multiplayer.image} />
+                </MobileEvent>
+                <MobileEvent>
+                    <MobileTitle>CCTV</MobileTitle>
+                    <MobileText>{projects.cctv.text}</MobileText>
+                    <MobilePhoto src={projects.cctv.image} />
                 </MobileEvent>
                 <MobileEvent>
                     <MobileTitle>CampusGuessr</MobileTitle>

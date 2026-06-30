@@ -61,15 +61,16 @@ const MonthYear = styled.h1`
 
 const TimelineStyle = styled.div`
     grid-column: 2;
-    grid-row: 1 / span 3;
+    grid-row: 1 / 4;
     justify-self: center;
-    align-self: center;
+    align-self: flex-start;
     position: relative;
 `;
 
 const TimelineLine = styled.img`
-    height: 50vh;
-    min-height: 400px;
+    height: 52vh;
+    min-height: 430px;
+    width: 6px;
 `;
 
 const TimelineImage = styled.img`
@@ -84,6 +85,9 @@ const Context = styled.p`
     grid-column: 1;
     font-weight: 700;
 
+    @media (max-width: 1260px) {
+    display:  none;
+    }
 `;
 
 
@@ -182,8 +186,8 @@ export default function Page4() {
                         </TimelineImage>
                     ))}
                 </TimelineStyle>
-                <Context>Hover over the timeline and click or scroll!</Context>
             </ExperienceContainer>
+            <Context>Hover over the timeline and click or scroll!</Context>
 
             {/* Mobile Timeline */}
             <MobileTimeline>

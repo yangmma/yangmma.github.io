@@ -1,85 +1,99 @@
-import React, { useRef, useEffect, useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import AboutContainer from '../components/AboutContainer';
+import PageLayout from "../components/PageLayout";
+import Profile from "../assets/ProfilePhoto(2).png"
 
-const Animation = keyframes`
-    0% {
-    opacity: 0;
-    transform: translateY(50px);
-    }
+const AboutContainer = styled.div`
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    margin: 0;
+    gap: 2rem;
 
-    100% {
-    opacity: 1;
-    transform: translateY(0)
+    @media (max-width: 1260px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 `;
 
-const AnimatedWrapper = styled.div`
-    animation: ${Animation} 2s ease-out forwards;
-    z-index:2;
+const LeadingText = styled.h2`
+    font-size: 3rem;
+    grid-row: 1;
+    grid-column: 1;
+    font-weight: 400;
+    margin: 2rem 0 0 0;
+
+    @media (max-width: 1260px) {
+        grid-row: auto;
+        grid-column: 1;
+    }
+`;
+
+const Bolded = styled.span`
+    font-weight: 700;
+`;
+
+const BodyText = styled.p`
+    white-space: pre-line;
+    margin: 0;
+`;  
+
+const BodyText1 = styled(BodyText)`
+    grid-row: 2;
+    grid-column: 1;
+    @media (max-width: 1260px) {
+        grid-row: auto;
+        grid-column: 1;
+    }
 `
 
-const LoopViewport = styled.div`
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
+const BodyText2 = styled(BodyText)`
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    @media (max-width: 1260px) {
+        grid-row: auto;
+        grid-column: 1;
+    }
 `
 
-const LoopContainer = styled.div`
-    will-change: transform;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+const BodyText3 = styled(BodyText)`
+    grid-row: 4;
+    grid-column: 1 / span 2;
+    @media (max-width: 1260px) {
+        grid-row: auto;
+        grid-column: 1;
+    }
 `
 
+const ProfilePhoto = styled.img`
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    height: 40vh;
+    justify-self: center;
+    align-self: center;
 
-export default function Page1() {
-  const trackRef = useRef(null);
-  const [trackHeight, setTrackHeight] = useState(0);
+    @media (max-width: 1260px) {
+        grid-row: auto;
+        grid-column: 1;
+        padding-top: 2rem;
+    }
+  `;
 
-  const items = [
-    <AboutContainer key={0} />,
-    <AboutContainer key={1} />,
-    <AboutContainer key={2} />,
-    <AboutContainer key={3} />,
-  ];
 
-  // Measure total height of all looped content
-  useEffect(() => {
-    if (!trackRef.current) return;
+export default function Page2() {
 
-    const track = trackRef.current;
-    const height = track.scrollHeight;
-    setTrackHeight(height);
-  }, []);
-
-  // Handle scroll and transform
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track || !trackHeight) return;
-
-    const handleScroll = () => {
-      const y = window.scrollY;
-      const offset = y % trackHeight;
-      track.style.transform = `translate3d(0, -${offset}px, 0)`;
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [trackHeight]);
-
-  return (
-    <>
-      {/* Scrollable spacer equals track height for a smooth scroll */}
-      <div style={{ height: trackHeight || "100vh" }} />
-
-      <LoopViewport>
-        <LoopContainer ref={trackRef}>
-          {items}
-          {items}
-        </LoopContainer>
-      </LoopViewport>
-    </>
-  );
+    return (
+        <div>
+            <PageLayout>About</PageLayout>
+            <AboutContainer>
+                <ProfilePhoto src={Profile} alt="My profile photo."/>
+                <LeadingText>My goal is to design and build products that are <Bolded>accessible</Bolded> and <Bolded>useful</Bolded> to those that need them. </LeadingText>
+                <BodyText1>I take a human-centered approach to my software engineering and research projects, which is informed heavily by my background in Psychology and Human Computer Interaction. I do my best to carefully understand the behaviours, desires, and frustrations of the people I work with, and to accommodate these needs into my work. </BodyText1>
+                <BodyText2>I am comfortable working with <Bolded>Python</Bolded> (including machine learning and statistics libraries such as <Bolded>PyTorch</Bolded>), <Bolded>React, TailwindCSS, MongoDB, PostgreSQL, Figma,</Bolded> and <Bolded>Express / Node.js.</Bolded></BodyText2>
+                <BodyText3>Outside of work and studies, I am a gig musician, martial artist, and rock climber. I like to seek out challenging activities and enjoy working with and meeting new people. </BodyText3>
+            </AboutContainer>
+        </div>
+        
+    );
 }
